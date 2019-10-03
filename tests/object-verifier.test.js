@@ -1,8 +1,17 @@
 const { assert } = require('chai');
-const { verify } = require('../index').buildVerifier({});
+const verifierBuilder = require('../index');
 
 describe('Object Verifier', function () {
-    it('passes when objects match', function () {
-        verify({}, {});
+
+    describe('Pass and fail cases', function () {
+        let verify;
+
+        beforeEach(function () {
+            verify = verifierBuilder.buildVerifier({}).verify;
+        });
+
+        it('passes when objects match', function () {
+            verify({}, {});
+        });
     });
 });
