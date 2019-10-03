@@ -7,7 +7,8 @@ describe('Object Verifier', function () {
         let verify;
 
         beforeEach(function () {
-            verify = verifierBuilder.buildVerifier({}).verify;
+            const objectVerifier = verifierBuilder.buildVerifier({});
+            verify = objectVerifier.verify;
         });
 
         it('passes when objects match', function () {
