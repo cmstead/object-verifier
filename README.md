@@ -1,2 +1,3 @@
-# object-verifier
-A drop-in testing utility for verifying object data against an expected model
+# Object Verifier #
+
+Object Verifier is a drop-in testing utility to compare objects as JSON stringified values.

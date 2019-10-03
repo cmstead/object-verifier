@@ -1,0 +1,44 @@
+{
+    "name": "object-verifier",
+    "version": "1.0.0",
+    "description": "\tA drop-in testing utility for verifying object data against an expected model",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "test": "node ./node_modules/nanocommit/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cmstead/object-verifier.git"
+    },
+    "keywords": [
+        "testing",
+        "tdd",
+        "\"gold",
+        "master\"",
+        "\"test",
+        "helper\""
+    ],
+    "author": "Chris Stead",
+    "license": "MPL-2.0",
+    "bugs": {
+        "url": "https://github.com/cmstead/object-verifier/issues"
+    },
+    "homepage": "https://github.com/cmstead/object-verifier#readme",
+    "dependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.1"
+    },
+    "nanocommit": {
+        "testCommand": "node ./node_modules/mocha/bin/mocha ./tests/*.test.js",
+        "blindCommit": true,
+        "annotations": "nanocommit",
+        "watchFiles": [],
+        "defaultCommandArgs": null,
+        "commitMessage": null,
+        "customAnnotations": null
+    },
+    "devDependencies": {
+        "nanocommit": "^1.13.0"
+    }
+}
