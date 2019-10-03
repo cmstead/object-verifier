@@ -13,5 +13,12 @@ describe('Object Verifier', function () {
         it('passes when objects match', function () {
             verify({}, {});
         });
+
+        it('fails when objects do not match', function () {
+            const verifyRunner = () => verify({}, { foo: 'bar' });
+
+            assert.throws(verifyRunner);
+        });
+
     });
 });
