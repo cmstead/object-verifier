@@ -20,5 +20,32 @@ describe('Object Verifier', function () {
             assert.throws(verifyRunner);
         });
 
+        it('Provides readible output for user when test fails', function () {
+            const expectedOutput = `
+Test values do not match. Please see output: 
+----------------------------
+Expected:
+
+{
+    "expected": "value"
+}
+
+Actual:
+
+{
+    "actual": "value"
+}
+----------------------------`;
+            let actualOutput;
+
+            try {
+                verify({ actual: 'value' }, { expected: 'value' });
+            } catch (e) {
+                actualOutput = e.message;
+            }
+
+            assert.equal(actualOutput, expectedOutput.trim());
+        });
+
     });
 });
