@@ -27,7 +27,7 @@
     "homepage": "https://github.com/cmstead/object-verifier#readme",
     "dependencies": {
         "chai": "^4.2.0",
-        "mocha": "^6.2.1"
+        "mocha": "^10.2.0"
     },
     "nanocommit": {
         "testCommand": "node ./node_modules/mocha/bin/mocha ./tests/*.test.js",
